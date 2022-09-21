@@ -13,7 +13,7 @@ Hi! I'm a fullstack web developer and this is my portfolio project in which I'm 
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://kweeka1.github.io/Portfolio/)
 
 ## Getting Started
 
