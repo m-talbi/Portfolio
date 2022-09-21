@@ -1,78 +1,27 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/*--- General Styles ---*/
+/* General Styles */
 
 :root {
-  --bg-purple: #6070FF;
-  --bg-dark-blue: #172B4D;
-  --bg-lavender: #EBEBFF;
-  --bg-slate-grey: #505F79;
+  --bg-purple: #6070ff;
+  --bg-dark-blue: #172b4d;
+  --bg-lavender: #ebebff;
+  --bg-slate-grey: #505f79;
   --text-dark-blue: #344563;
   --font-poppins: "Poppins", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #E5E5E5;
-}
-
-h2 {
-  color: var(--bg-purple);
-  font-family: var(--font-poppins);
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
+  background-color: #e5e5e5;
 }
 
 h6 {
@@ -83,151 +32,25 @@ h6 {
   line-height: 24px;
 }
 
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
 .flex {
   display: flex;
   align-items: center;
 }
 
-/* Shapes */
-
-.icon-circle {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: var(--bg-purple);
-  border-radius: 1.625rem;
-}
-
-.icon-half-circle {
-  position: absolute;
-  width: 35px;
-  height: 35px;
-  background-color: var(--bg-purple);
-  border-radius: 1.625rem;
-}
-
-.icon-half-circle::after {
-  content: " ";
-  left: 4px;
-  position: absolute;
-  width: 36px;
-  height: calc(35px / 2);
-  background-color: white;
-  border-radius: 1.625rem 1.625rem 0 0;
-  transform: rotate(30deg);
-}
-
-.icon-circle-edge {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 1.625rem;
-  background-color: white;
-  border: 1px solid #CBCDFF;
-}
-
-.icon-small-circle {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 1.625rem;
-  background-color: var(--bg-lavender);
-}
-
-.icon-small-half-ellipse {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: var(--bg-lavender);
-  transform: rotate(210deg);
-}
-
-.icon-small-half-ellipse::before {
-  content: " ";
-  top: 25%;
-  left: 50%;
-  position: absolute;
-  width: 30px;
-  height: calc(30px / 2);
-  border-radius: 100% 100% 0 0;
-  background-color: white;
-  transform: translate(-50%, -50%);
-}
-
-.icon-small-half-ellipse::after {
-  content: " ";
-  position: absolute;
-  width: 17px;
-  height: 17px;
-  border-radius: 50%;
-  background-color: white;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.icon-big-half-ellipse {
-  position: absolute;
-  width: 105px;
-  height: 105px;
-  border-radius: 50%;
-  background-color: var(--bg-purple);
-  transform: rotate(130deg);
-}
-
-.icon-big-half-ellipse::before {
-  content: " ";
-  top: 25%;
-  left: 50%;
-  position: absolute;
-  width: 105px;
-  height: calc(105px / 2);
-  border-radius: 100% 100% 0 0;
-  background-color: white;
-  transform: translate(-50%, -50%);
-}
-
-.icon-big-half-ellipse::after {
-  content: " ";
-  position: absolute;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  background-color: white;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.icon-small-rectangle {
-  position: absolute;
-  width: 26px;
-  height: 4.73px;
-  background-color: var(--bg-purple);
-  transform: rotate(45deg);
-}
-
-.icon-medium-rectangle {
-  position: absolute;
-  width: 68px;
-  height: 12px;
-  background-color: var(--bg-lavender);
-  transform: rotate(24deg);
-}
-
-.icon-big-rectangle {
-  position: absolute;
-  width: 95px;
-  height: 22px;
-  background-color: var(--bg-lavender);
-  transform: rotate(-35deg);
-}
-
-
-/*--- Main Section ---*/
+/* Main Section */
 
 main {
+  background-image: url("./img/header-shapes.svg");
+  background-position: 0 60%;
+  background-repeat: no-repeat;
   position: relative;
   min-width: 25vw;
   width: 375px;
@@ -238,14 +61,24 @@ main {
   overflow: hidden;
 }
 
-/*--- Header Section ---*/
+/* Nav Section */
 
-header {
+nav {
   padding: 1.5rem;
   justify-content: space-between;
 }
 
-/* Header - Hamburger icon */
+/* Nav - Title */
+
+#title {
+  color: var(--bg-purple);
+  font-family: var(--font-poppins);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+/* Nav - Hamburger icon */
 
 .icon_hamburger__container {
   justify-content: center;
@@ -280,7 +113,7 @@ header {
   background-color: var(--bg-purple);
 }
 
-/*--- Headline section ---*/
+/* Headline section */
 
 .headline {
   display: flex;
@@ -320,81 +153,10 @@ header {
   justify-content: flex-start;
 }
 
-.icons_social__container > i {
+.fa-brands {
   font-size: 30px;
   background-color: white;
   color: var(--bg-slate-grey);
   margin-right: 1rem;
   cursor: pointer;
-}
-
-/* Headline - Background shapes placement */
-
-#top-left-half-circle {
-  top: 95px;
-  left: -15px;
-}
-
-#top-circle-edge {
-  top: 70px;
-  left: 55%;
-}
-
-#top-small-rectangle {
-  top: 110px;
-  left: 127px;
-}
-
-#top-small-circle {
-  top: 113px;
-  left: 127px;
-}
-
-#top-right-big-rectangle {
-  top: 95px;
-  right: -20px;
-}
-
-#top-right-big-ellipse {
-  top: 107px;
-  right: -60px;
-}
-
-#top-left-medium-rectangle {
-  top: 98px;
-  left: -50px;
-  transform: rotate(-50deg);
-}
-
-#middle-right-circle-edge {
-  top: 37%;
-  right: 60px;
-}
-
-#bottom-left-circle-edge {
-  bottom: 50px;
-  left: 50px;
-}
-
-#bottom-medium-rectangle {
-  bottom: 50px;
-  left: 50%;
-}
-
-#bottom-right-half-circle {
-  top: 495px;
-  right: 50px;
-  width: 32px;
-  height: 32px;
-  transform: rotate(-20deg);
-}
-
-#bottom-circle {
-  bottom: 51px;
-  left: 63.5%;
-}
-
-#bottom-right-small-ellipse {
-  top: 73.3%;
-  right: 59px;
 }
