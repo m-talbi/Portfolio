@@ -7,47 +7,146 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main>
-      <nav class="flex">
+    <div class="portfolio">
+      <nav class="flex bg-white">
         <a id="title" href="#">Logo</a>
         <div class="flex icon_hamburger__container">
           <span id="icon-hamburger"></span>
         </div>
       </nav>
-      <section class="headline">
-        <h1>I'm Mariane <br> Glad to see <br> you!</h1>
-        <p>I'm a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don't hestiate to contact me.</p>
-        <div class="flex headline__socials">
-          <h6>LET'S CONNECT</h6>
-          <ul class="icons_social__container flex">
+      <main class="headline bg-white">
+        <article>
+          <h1>I'm Mariane <br> Glad to see <br> you!</h1>
+          <p>I'm a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don't hestiate to contact me.</p>
+          <div class="socials__container">
+            <h6>LET'S CONNECT</h6>
+            <ul class="icons_social__container flex">
+              <li>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </main>
+      <section class="projects">
+        <article class="card flex bg-white">
+          <img src="./img/project_1.png" alt="tonic project preview">
+          <h3>Tonic</h3>
+          <ul class="flex project_details">
+            <li>CANOPY</li>
+            <li>BACKEND DEV</li>
+            <li>2015</li>
+          </ul>
+          <p>A daily selection of privately personalized reads; no accounts or sign-ups required.</p>
+          <ul class="flex project_coding_langs">
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+          </ul>
+          <button class="preview_button btn-outlined">See Project</button>
+        </article>
+        <article class="card flex bg-white">
+          <img src="./img/project_2.png" alt="Multi-Post project preview">
+          <h3>Multi-Post Stories</h3>
+          <ul class="flex project_details">
+            <li>CANOPY</li>
+            <li>BACKEND DEV</li>
+            <li>2015</li>
+          </ul>
+          <p>A daily selection of privately personalized reads; no accounts or sign-ups required.</p>
+          <ul class="flex project_coding_langs">
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+          </ul>
+          <button class="preview_button btn-outlined">See Project</button>
+        </article>
+        <article class="card flex bg-white">
+          <img src="./img/project_3.png" alt="tonic project preview">
+          <h3>Tonic</h3>
+          <ul class="flex project_details">
+            <li>CANOPY</li>
+            <li>BACKEND DEV</li>
+            <li>2015</li>
+          </ul>
+          <p>A daily selection of privately personalized reads; no accounts or sign-ups required.</p>
+          <ul class="flex project_coding_langs">
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+          </ul>
+          <button class="preview_button btn-outlined">See Project</button>
+        </article>
+        <article class="card flex bg-white">
+          <img src="./img/project_4.png" alt="Multi-Post project preview">
+          <h3>Multi-Post Stories</h3>
+          <ul class="flex project_details">
+            <li>CANOPY</li>
+            <li>BACKEND DEV</li>
+            <li>2015</li>
+          </ul>
+          <p>A daily selection of privately personalized reads; no accounts or sign-ups required.</p>
+          <ul class="flex project_coding_langs">
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+          </ul>
+          <button class="preview_button btn-outlined">See Project</button>
+        </article>
+      </section>
+      <section class="about bg-white">
+        <article>
+          <h1>About <br> Myself</h1>
+          <p>Hello I’m a software developer! I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded, don’t hestiate to contact me.</p>
+          <div class="socials__container">
+            <h6>LET'S CONNECT</h6>
+            <ul class="icons_social__container flex">
+              <li>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+          <button class="btn-outlined">Get My Resume</button>
+          <ul class="about__knowledge">
             <li>
-              <a href="#">
-                <i class="fa-brands fa-twitter"></i>
-              </a>
+              <span>Languages</span>
+              <i class="fa-solid fa-chevron-right"></i>
             </li>
             <li>
-              <a href="#">
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a>
+              <span>Frameworks</span>
+              <i class="fa-solid fa-chevron-right"></i>
             </li>
             <li>
-              <a href="#">
-                <i class="fa-brands fa-github"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fa-brands fa-facebook-f"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fa-brands fa-instagram"></i>
-              </a>
+              <span>Skills</span>
+              <i class="fa-solid fa-chevron-right"></i>
             </li>
           </ul>
-        </div>
+        </article>
       </section>
-    </main>
+    </div>
   </body>
 </html>
