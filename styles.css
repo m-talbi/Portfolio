@@ -78,7 +78,7 @@ button {
 }
 
 .btn-outlined {
-  color: #396DF2;
+  color: #396df2;
 }
 
 .btn-outlined:hover {
@@ -221,7 +221,7 @@ nav {
   padding: 16px;
   gap: 10px;
   width: 327px;
-  border: 1px solid #DFE1E6;
+  border: 1px solid #dfe1e6;
   border-radius: 16px;
 }
 
@@ -233,15 +233,6 @@ nav {
   line-height: 16px;
 }
 
-.card > .project_details > li:first-child {
-  list-style: none;
-  color: var(--text-dark-blue);
-}
-
-.card > p {
-  padding: 0;
-}
-
 .card > .project_coding_langs > li {
   list-style: none;
   color: var(--bg-purple);
@@ -250,6 +241,15 @@ nav {
   border-radius: 8px;
   margin-right: 1.5rem;
   padding: 4px 12px;
+}
+
+.card > .project_details > li:first-child {
+  list-style: none;
+  color: var(--text-dark-blue);
+}
+
+.card > p {
+  padding: 0;
 }
 
 /* About section */
@@ -265,14 +265,14 @@ nav {
 
 /* About - Knowledge list */
 
-.about__knowledge {
+.about__stacks {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 1.5rem 0;
 }
 
-.about__knowledge > li {
+.about_stacks__item {
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -281,9 +281,9 @@ nav {
   line-height: 24px;
   padding: 1.5rem 0.5rem;
   cursor: pointer;
-  border-bottom: 1px solid #DFE1E6;
+  border-bottom: 1px solid #dfe1e6;
 }
 
-.about__knowledge > li:hover {
+.about_stacks__item:hover {
   background-color: #f1f1f1;
 }
