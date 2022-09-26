@@ -123,6 +123,11 @@ button {
   align-items: center;
 }
 
+.float {
+  display: block;
+  float: left;
+}
+
 .bg-white {
   background-color: white;
 }
