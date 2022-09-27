@@ -67,18 +67,40 @@ ul {
 
 button {
   all: unset;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
   display: flex;
   align-items: center;
   text-align: center;
   cursor: pointer;
   border-radius: 8px;
   padding: 12px;
-  border: 1px solid var(--bg-purple);
   transition: all 0.3s ease;
 }
 
-.btn-outlined {
+.btn-primary {
   color: #396df2;
+}
+
+.btn-contained {
+  background-color: #fff;
+}
+
+.btn-contained:hover {
+  color: #fff;
+  background-color: #2230d2;
+  box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
+}
+
+.btn-contained:active {
+  color: #2230d2;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
+}
+
+.btn-outlined {
+  border: 1px solid var(--bg-purple);
 }
 
 .btn-outlined:hover {
@@ -87,8 +109,8 @@ button {
 }
 
 .btn-outlined:active {
-  background-color: white;
-  color: var(--bg-purple);
+  background-color: #2230d2;
+  color: #fff;
 }
 
 /* Shared Styles */
@@ -286,4 +308,94 @@ nav {
 
 .about_stacks__item:hover {
   background-color: #f1f1f1;
+}
+
+/* Footer Section */
+
+footer {
+  position: relative;
+}
+
+footer::after {
+  content: " ";
+  position: absolute;
+  background: #0d151e;
+  border-radius: 10px;
+  width: 134px;
+  height: 5px;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Footer - Background shapes */
+
+.bg-shapes {
+  position: absolute;
+  width: 265px;
+  height: 709.17px;
+  right: -50px;
+  top: 15px;
+  background-image: url("./img/contact-form-shapes-mobile.svg");
+}
+
+/* Footer - article */
+
+footer > article {
+  background-color: var(--bg-purple);
+  padding: 6rem 1.5rem;
+  border-top-left-radius: calc(10rem / 3);
+  flex-direction: column;
+  width: 375px;
+}
+
+footer > article ul {
+  list-style: none;
+}
+
+.footer__container > p {
+  text-align: center;
+  color: var(--bg-lavender);
+}
+
+footer > article h1 {
+  text-align: center;
+  color: var(--bg-lavender);
+}
+
+/* Footer - Form */
+
+.form_fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input {
+  outline: none;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 0 0.5rem;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: var(--bg-dark-blue);
+  width: 327px;
+  height: 48px;
+}
+
+form textarea {
+  resize: none;
+  outline: none;
+  color: var(--bg-dark-blue);
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 0 0.5rem;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  width: 327px;
+  height: 170px;
 }
