@@ -496,6 +496,15 @@ footer::after {
     gap: 2rem;
   }
 
+  .nav_menu__container li {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav_menu__container li:hover {
+    transform: translateY(-6px);
+    letter-spacing: 1px;
+  }
+
   .nav_menu__container a {
     color: var(--text-dark-blue);
   }
