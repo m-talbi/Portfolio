@@ -167,6 +167,7 @@ button {
   background-color: white;
   color: var(--bg-slate-grey);
   cursor: pointer;
+  transition: transform 0.1s linear;
 }
 
 .flex {
@@ -511,6 +512,10 @@ footer::after {
     align-items: center;
     padding: 6rem 18vw;
     overflow: hidden;
+  }
+
+  .fa-brands:hover {
+    transform: scale(1.15);
   }
 
   /* Projects Section */
