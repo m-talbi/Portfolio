@@ -515,7 +515,7 @@ footer::after {
     background-image: url("./img/desktop-shapes-bg.svg");
     background-size: 100%;
     background-position: center;
-    height: calc(100vh - 5rem);
+    min-height: calc(100vh - 5rem);
     background-repeat: no-repeat;
     justify-content: center;
     align-items: center;
