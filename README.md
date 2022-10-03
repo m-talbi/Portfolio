@@ -2,8 +2,6 @@
 
 Hi! I'm a fullstack web developer and this is my portfolio project in which I'm going to show my resume, my favorite projects and where to contact me.
 
-> Currently implemented Hero section with a header and a headline.
-
 
 ## This Project Is Built With
 
