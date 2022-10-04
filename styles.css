@@ -269,6 +269,7 @@ button {
   flex-direction: column;
   justify-self: flex-start;
   gap: 12px;
+  flex: 1;
 }
 
 .card .project_details > li {
@@ -303,6 +304,7 @@ button {
   max-width: 544px;
   min-width: 307px;
   width: 100%;
+  flex: 1;
 }
 
 .card p {
@@ -546,8 +548,6 @@ footer::after {
   }
 
   .card > article {
-    display: flex;
-    flex-direction: column;
     padding: 1.5rem 0 1.5rem 1.5rem;
     gap: 18px;
   }
