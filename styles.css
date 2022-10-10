@@ -144,6 +144,12 @@ button {
 
 /* Shared Styles */
 
+.backdrop_filter > main,
+.backdrop_filter > section,
+.backdrop_filter > #contact {
+  filter: blur(5px);
+}
+
 .socials__container {
   display: flex;
   width: 50%;
@@ -195,8 +201,28 @@ nav {
   z-index: 10;
 }
 
-.backdrop_filter {
-  filter: blur(5px);
+#title {
+  color: var(--bg-purple);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+/* Nav - Menu Links toggle icon */
+
+.nav_icon__container {
+  cursor: pointer;
+}
+
+.nav_active {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--bg-purple);
+  z-index: 10;
+  opacity: 0.9;
+  align-items: flex-start;
+  padding: 1.3rem 2rem;
 }
 
 .links_active {
@@ -219,32 +245,6 @@ nav {
 
 .links_active a:hover {
   color: var(--bg-dark-blue);
-}
-
-.nav_active {
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  background-color: var(--bg-purple);
-  z-index: 10;
-  opacity: 0.9;
-  align-items: flex-start;
-}
-
-#title {
-  color: var(--bg-purple);
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
-}
-
-/* Nav - Menu Links toggle icon */
-
-.nav_icon__container {
-  justify-content: center;
-  width: 20px;
-  height: 15px;
-  cursor: pointer;
 }
 
 /* Headline section */
@@ -459,7 +459,7 @@ footer::after {
   }
 
   .about {
-    padding: 2rem;
+    padding: 6rem 2rem;
   }
 
   .footer__container {

@@ -3,41 +3,48 @@ const navIcon = document.getElementById('nav-icon');
 const navMenuLinks = document.getElementById('nav-menu-links');
 const body = document.querySelector('body');
 const links = document.querySelectorAll('.nav_menu__container a');
-const main = document.querySelector('.headline');
-const projects = document.querySelector('.projects');
-const about = document.querySelector('.about');
-const contact = document.querySelector('.footer__container');
 
-body.addEventListener('scroll', () => {
-  if (navBar.scrollTop !== 0) navBar.style.boxShadow = '2px 2px 2px 1px rgba(0, 0, 0, 0.2);';
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 1) navBar.style.boxShadow = '2px 2px 2px 1px rgba(0, 0, 0, 0.2)';
+  else navBar.style.boxShadow = 'none';
 });
 
-function handler(){
+function handler() {
+  if (window.innerWidth > 820) return;
   if (navIcon.firstElementChild.id === 'hamburger-icon') {
-    body.style.overflowX = 'hidden';
+    body.style.overflowY = 'hidden';
     navIcon.firstElementChild.src = './img/close-icon.svg';
     navIcon.firstElementChild.id = 'close-icon';
   } else {
-    body.style.overflowX = 'scroll';
+    body.style.overflowY = 'scroll';
     navIcon.firstElementChild.src = './img/hamburger-icon.svg';
     navIcon.firstElementChild.id = 'hamburger-icon';
   }
 
   navMenuLinks.classList.toggle('links_active');
   navBar.classList.toggle('nav_active');
-  main.classList.toggle('backdrop_filter');
-  projects.classList.toggle('backdrop_filter');
-  about.classList.toggle('backdrop_filter');
-  contact.classList.toggle('backdrop_filter');
+  body.classList.toggle('backdrop_filter');
 }
+
+links.forEach((link) => {
+  link.addEventListener('click', handler);
+});
 
 navIcon.addEventListener('click', handler);
 
-
 window.addEventListener('resize', () => {
-  if(window.innerWidth < 820){
-    links.forEach(link => {
-      link.addEventListener('click', handler);
-    });
-  }
-})
+  links.forEach((link) => {
+    link.removeEventListener('click', handler);
+  });
+
+  links.forEach((link) => {
+    link.addEventListener('click', handler);
+  });
+
+  navMenuLinks.classList.remove('links_active');
+  navBar.classList.remove('nav_active');
+  body.classList.remove('backdrop_filter');
+  navIcon.firstElementChild.src = './img/hamburger-icon.svg';
+  navIcon.firstElementChild.id = 'hamburger-icon';
+  body.style.overflowY = 'scroll';
+});
