@@ -196,13 +196,13 @@ nav {
 }
 
 .backdrop_filter {
-  filter: blur(3px);
+  filter: blur(5px);
 }
 
 .links_active {
   list-style: none;
   position: absolute;
-  left: 0;
+  left: 2rem;
   top: 2rem;
   display: flex !important;
   flex-direction: column;
@@ -214,6 +214,11 @@ nav {
   font-weight: 600;
   font-size: 32px;
   line-height: 44px;
+  transition: 0.2s;
+}
+
+.links_active a:hover {
+  color: var(--bg-dark-blue);
 }
 
 .nav_active {
@@ -222,7 +227,7 @@ nav {
   width: 100%;
   background-color: var(--bg-purple);
   z-index: 10;
-  opacity: 0.7;
+  opacity: 0.9;
   align-items: flex-start;
 }
 
