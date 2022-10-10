@@ -144,6 +144,12 @@ button {
 
 /* Shared Styles */
 
+.backdrop_filter > main,
+.backdrop_filter > section,
+.backdrop_filter > #contact {
+  filter: blur(5px);
+}
+
 .socials__container {
   display: flex;
   width: 50%;
@@ -188,6 +194,13 @@ button {
 
 /* Nav Section */
 
+nav {
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
 #title {
   color: var(--bg-purple);
   font-weight: 700;
@@ -195,40 +208,43 @@ button {
   line-height: 20px;
 }
 
-/* Nav - Hamburger icon */
+/* Nav - Menu Links toggle icon */
 
-.icon_hamburger__container {
-  justify-content: center;
-  width: 20px;
-  height: 15px;
+.nav_icon__container {
   cursor: pointer;
-  overflow: visible;
 }
 
-#icon-hamburger {
-  position: relative;
-  display: block;
-  width: 20px;
-  height: 2px;
+.nav_active {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
   background-color: var(--bg-purple);
+  z-index: 10;
+  opacity: 0.9;
+  align-items: flex-start;
+  padding: 1.3rem 2rem;
 }
 
-#icon-hamburger::after {
-  content: " ";
+.links_active {
+  list-style: none;
   position: absolute;
-  top: -5px;
-  width: 20px;
-  height: 2px;
-  background-color: var(--bg-purple);
+  left: 2rem;
+  top: 2rem;
+  display: flex !important;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-#icon-hamburger::before {
-  content: " ";
-  position: absolute;
-  top: 5px;
-  width: 20px;
-  height: 2px;
-  background-color: var(--bg-purple);
+.links_active a {
+  color: white;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  transition: 0.2s;
+}
+
+.links_active a:hover {
+  color: var(--bg-dark-blue);
 }
 
 /* Headline section */
@@ -238,7 +254,6 @@ button {
   align-items: flex-start;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 6rem 1.5rem;
   border-bottom-left-radius: calc(10rem / 3);
 }
 
@@ -371,6 +386,7 @@ button {
 
 footer {
   position: relative;
+  min-height: 100vh;
 }
 
 footer::after {
@@ -394,6 +410,7 @@ footer::after {
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  min-height: 100vh;
 }
 
 .footer__container > p {
@@ -419,7 +436,6 @@ footer::after {
 @media screen and (max-width: 820px) {
   nav {
     justify-content: space-between;
-    padding: 2rem;
   }
 
   .headline {
@@ -443,7 +459,7 @@ footer::after {
   }
 
   .about {
-    padding: 2rem;
+    padding: 6rem 2rem;
   }
 
   .footer__container {
@@ -485,10 +501,9 @@ footer::after {
 
   nav {
     justify-content: space-around;
-    padding: 1.5rem 0;
   }
 
-  .icon_hamburger__container {
+  .nav_icon__container {
     display: none;
   }
 
@@ -517,7 +532,7 @@ footer::after {
     background-image: url("./img/desktop-shapes-bg.svg");
     background-size: 100%;
     background-position: center;
-    min-height: calc(100vh - 5rem);
+    min-height: calc(100vh + 4rem);
     background-repeat: no-repeat;
     justify-content: center;
     align-items: center;

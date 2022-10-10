@@ -11,18 +11,19 @@
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" type="text/javascript" defer></script>
 </head>
 
 <body>
-  <nav class="flex bg-white">
+  <nav id="navbar" class="flex bg-white">
     <a id="title" href="#">Logo</a>
-    <div class="icon_hamburger__container">
-      <span id="icon-hamburger"></span>
+    <div id="nav-icon" class="nav_icon__container">
+      <img id="hamburger-icon" alt="hamburger icon" src="img/hamburger-icon.svg">
     </div>
-    <ul class="nav_menu__container">
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+    <ul id="nav-menu-links" class="nav_menu__container">
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
   <main class="headline bg-white">
@@ -60,7 +61,7 @@
       </div>
     </article>
   </main>
-  <section class="projects">
+  <section id="portfolio" class="projects">
     <section class="card flex bg-white">
       <img class="desktop-bg" src="./img/project-1-desktop.png" alt="tonic project preview" />
       <article>
@@ -146,7 +147,7 @@
       </article>
     </section>
   </section>
-  <section class="about bg-white">
+  <section id="about" class="about bg-white">
     <article>
       <h1>
         About <br />
@@ -215,7 +216,7 @@
       </li>
     </ul>
   </section>
-  <footer class="bg-white flex">
+  <footer id="contact" class="bg-white flex">
     <article class="footer__container flex">
       <h1>Contact me</h1>
       <p>
