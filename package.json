@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server --open=./index.html"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.26.0",
     "hint": "^7.1.2",
+    "live-server": "^1.2.2",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
