@@ -1,4 +1,5 @@
 const projectsSection = document.getElementById("portfolio")
+const popup = document.querySelector('.datails');
 
 const projects = [
   {
@@ -44,36 +45,95 @@ const projects = [
 ]
 
 window.onload = function () {
-  projects.forEach((project) => {
-    const card = generateCard(project)
+  projects.forEach((project, index) => {
+    const card = generateCard(project, index)
     projectsSection.insertAdjacentHTML('beforeend', card)
-  })
+  });
+
+  
+
+  const projectDetailBtns = document.querySelectorAll(".project-detail");
+  
+
+  projectDetailBtns.forEach(btn => {
+    btn.addEventListener('click',() => {
+
+      popup.classList.toggle('show');
+
+      const detail = generateDetail(projects[btn.id]);
+      popup.replaceChildren('');
+      popup.insertAdjacentHTML('beforeend',  detail);
+
+      const close = document.querySelector(".close-detail");
+      close.addEventListener('click',() => {
+        popup.classList.toggle('show');
+      })
+    })
+  
+  });
 }
 
-const generateTechnologies = (tech) => {
-  return `<li>${tech}</li>`
+const generateList = (arr) => {
+  let htmlCode = "";
+  arr.forEach(element => {
+    htmlCode += `<li>${element}</li>`;
+  });
+  
+  return htmlCode;
 }
 
-const generateCard = (project) => (
+const generateDetail = (project) => {
+  return `
+    <section class="section-detail">
+    <img class="close-detail" src="./img/close-detail.svg" alt="Close project details" />
+      <article>
+        <div>
+          <h1>${project.title}</h1>
+           <ul>
+             ${generateList(project.type)}
+           </ul>
+        </div>
+
+        <div>
+          <img src=${project.img.src} alt=${project.img.alt} />
+        </div>
+
+        <div>
+          <p>${project.description}</p>
+
+          <div>
+            <ul>${generateList(project.technologies)}</ul>
+            <button class="btn-primary btn-outlined">
+              <img src="./img/liveArrow.svg" alt="link to live demo" />
+              See live
+            </button>
+            <button class="btn-primary btn-outlined">
+                <img src="./img/github.svg" alt="link to github code" />
+              See source
+            </button>
+          </div>
+        </div>
+      </article>
+    </section>
+  `;
+}
+
+const generateCard = (project, id) => (
   `
     <section class="card flex bg-white">
       <img class="desktop-bg" src="${project.img.src}" alt="${project.img.alt}" />
       <article>
         <h3>${project.title}</h3>
         <ul class="flex project_details">
-        ${project.type.map((detail) => {
-          return "<li>" + detail + "</li>"
-        })}
+        ${generateList(project.type)}
         </ul>
         <p>
         ${project.description}
         </p>
         <ul class="flex project_coding_langs">
-        ${project.technologies.map((tech) => {
-          return "<li>" + tech + "</li>"
-        })}
+        ${generateList(project.technologies)}
         </ul>
-        <button class="btn-primary btn-outlined">See Project</button>
+        <button id=${id} class=" project-detail btn-primary btn-outlined">See Project</button>
       </article>
     </section>
   `
