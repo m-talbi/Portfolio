@@ -343,6 +343,7 @@ nav {
 
 .section_detail__title {
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .show {
