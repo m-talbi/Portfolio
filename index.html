@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" type="text/javascript" defer></script>
   <script src="projects.js" type="text/javascript" defer></script>
+  <script src="form-validation.js" type="text/javascript" defer></script>
 </head>
 
 <body>
@@ -141,7 +142,7 @@
         feature that you need built or a project that needs coding. I’d love
         to help with it
       </p>
-      <form action="https://formspree.io/f/xeqdgnwv" method="post">
+      <form id="form" action="https://formspree.io/f/xeqdgnwv" method="post">
         <ul class="form_fields">
           <li>
             <input type="text" name="full name" id="name" placeholder="Full name" required maxlength="30" />
@@ -155,6 +156,9 @@
           </li>
           <li>
             <button class="btn-primary btn-contained" type="submit">Get in touch</button>
+          </li>
+          <li class="form-error">
+
           </li>
         </ul>
       </form>
