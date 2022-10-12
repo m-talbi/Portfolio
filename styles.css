@@ -506,13 +506,9 @@ footer::after {
 }
 
 .form-error {
-  border: 1px solid red;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.form-error p {
-  color: red;
+  color: #dad8d8;
+  padding-bottom: 0;
+  width: 327px;
 }
 
 @media screen and (max-width: 820px) {
