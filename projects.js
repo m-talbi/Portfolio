@@ -95,7 +95,7 @@ const generateCard = (project, id) => `
       </article>
     </section>`;
 
-window.onload = () => {
+window.addEventListener('load', () => {
   projects.forEach((project, index) => {
     const card = generateCard(project, index);
     projectsSection.insertAdjacentHTML('beforeend', card);
@@ -132,9 +132,9 @@ window.onload = () => {
     });
   });
 
-  window.onresize = () => {
+  window.addEventListener('resize', () => {
     docBody.classList.remove('backdrop_filter_details');
     popupContainer.classList.remove('show');
     docBody.style.overflowY = 'scroll';
-  };
-};
+  });
+});
