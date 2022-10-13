@@ -14,7 +14,7 @@ function isLocaleStorageAvailable() {
   }
 }
 
-window.onload = () => {
+window.addEventListener('load', () => {
   if (!isLocaleStorageAvailable()) return;
 
   const isDataExist = JSON.parse(localStorage.getItem('contact-form'));
@@ -24,9 +24,9 @@ window.onload = () => {
   contactUsernameField.value = isDataExist?.username;
   contactEmailField.value = isDataExist?.email;
   contactMessageField.value = isDataExist?.message;
-};
+});
 
-contactForm.oninput = () => {
+contactForm.addEventListener('input', () => {
   if (!isLocaleStorageAvailable()) return;
 
   const username = contactUsernameField.value;
@@ -34,4 +34,4 @@ contactForm.oninput = () => {
   const message = contactMessageField.value;
 
   localStorage.setItem('contact-form', JSON.stringify({ username, email, message }));
-};
+});
