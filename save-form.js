@@ -21,9 +21,9 @@ window.addEventListener('load', () => {
 
   if (!isDataExist) return;
 
-  contactUsernameField.value = isDataExist?.username;
-  contactEmailField.value = isDataExist?.email;
-  contactMessageField.value = isDataExist?.message;
+  contactUsernameField.value = isDataExist.username;
+  contactEmailField.value = isDataExist.email;
+  contactMessageField.value = isDataExist.message;
 });
 
 contactForm.addEventListener('input', () => {
