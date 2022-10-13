@@ -84,6 +84,8 @@ navIcon.addEventListener('click', handleMobileViewClick);
 
 window.addEventListener('resize', () => {
   resetNavBar();
+  underline.style.display = 'none';
+  underline.style.left = `${links[0].offsetLeft - 6}px`;
 
   links.forEach((link) => {
     link.removeEventListener('click', (ev) => handleClick(ev));
@@ -94,4 +96,7 @@ window.addEventListener('resize', () => {
   });
 });
 
-window.addEventListener('scroll', handleUnderline);
+window.addEventListener('scroll', () => {
+  if (window.innerWidth < 820) return;
+  handleUnderline();
+});
