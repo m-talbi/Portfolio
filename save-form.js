@@ -5,7 +5,7 @@ const contactMessageField = document.getElementById('textarea');
 
 function isLocaleStorageAvailable() {
   try {
-    const x = 'test_localStorage';
+    const x = 'test__localStorage';
     localStorage.setItem(x, x);
     localStorage.removeItem(x);
     return true;
