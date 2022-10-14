@@ -26,19 +26,19 @@ function handleUnderline() {
     // Portfolio projects Section
     case (scrollTop > (portfolio.offsetTop - 200) && scrollTop < (about.offsetTop - 200)):
       underline.style.display = 'block';
-      underline.style.width = `${links[0].scrollWidth + 14}px`;
+      underline.style.width = `${links[0].offsetWidth + 14}px`;
       underline.style.left = `${links[0].offsetLeft - 6}px`;
       break;
     // About Section
     case (scrollTop > (about.offsetTop - 200) && scrollTop < (contact.offsetTop - 100)):
       underline.style.display = 'block';
-      underline.style.width = `${links[1].scrollWidth + 14}px`;
+      underline.style.width = `${links[1].offsetWidth + 14}px`;
       underline.style.left = `${links[1].offsetLeft - 6}px`;
       break;
     // Contact Section
     case (scrollTop > (contact.offsetTop - 100)):
       underline.style.display = 'block';
-      underline.style.width = `${links[2].scrollWidth + 14}px`;
+      underline.style.width = `${links[2].offsetWidth + 14}px`;
       underline.style.left = `${links[2].offsetLeft - 6}px`;
       break;
     default:
