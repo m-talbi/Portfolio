@@ -12,6 +12,8 @@ const projects = [
     type: ['CANOPY', 'BACKEND DEV', '2015'],
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     technologies: ['HTML', 'CSS', 'Javascript'],
+    demo: '',
+    source: '',
   },
   {
     img: {
@@ -22,28 +24,39 @@ const projects = [
     type: ['FACEBOOK', 'Full Stack Dev', '2015'],
     description: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
     technologies: ['HTML', 'Ruby on Rails', 'CSS', 'Javascript'],
+    demo: '',
+    source: '',
   },
   {
     img: {
-      src: './img/project-3-desktop.png',
-      alt: 'Facebook 360 project preview',
+      src: './img/project-5-desktop.png',
+      alt: 'To do application preview',
     },
-    title: 'Facebook 360',
-    type: ['CANOPY', 'BACKEND DEV', '2015'],
-    description: 'Exploring the future of media in Facebook\'s first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR.',
-    technologies: ['HTML', 'Ruby on Rails', 'CSS', 'Javascript'],
+    title: 'To Do App',
+    type: ['WEB', 'FRONTEND DEV', '2022'],
+    description: 'To do List project is a small application where you can save your todo things or tasks inside browser\'s local storage so you won\'t forget about them and you can also tick each one to be marked as completed.',
+    technologies: ['HTML', 'CSS', 'Javascript', 'Webpack'],
+    demo: 'https://kweeka1.github.io/to-do-list/dist/',
+    source: 'https://github.com/Kweeka1/to-do-list',
   },
   {
     img: {
-      src: './img/project-4-desktop.png',
-      alt: 'Uber Navigation project preview',
+      src: './img/project-6-desktop.png',
+      alt: '2022 Global artificial intelligence conference page preview',
     },
-    title: 'Uber Navigation',
-    type: ['UBER', 'Lead Developer', '2018'],
-    description: 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
-    technologies: ['HTML', 'Ruby on Rails', 'CSS', 'Javascript'],
+    title: 'Global AI Conference page',
+    type: ['WEB', 'FRONTEND DEV', '2022'],
+    description: 'This is my personel version of the conference page design by Cindy Shin in Behance. where I try to implement the mockup as precisely as possible. And I also changed the page content to talk about The Global AI Summit which is a two-way conversation that engages every attendee, speaker, and partner in a rich dialogue about how AI can solve complex problems, empower businesses, and transform society.',
+    technologies: ['HTML', 'CSS', 'Javascript'],
+    demo: 'https://kweeka1.github.io/capstone-project-conference-page/',
+    source: 'https://github.com/Kweeka1/capstone-project-conference-page',
   },
 ];
+
+const openURLInNewTab = (url) => {
+  if (!url) return;
+  window.open(url, '_blank');
+};
 
 const generateList = (arr) => arr.reduce((elements, element) => `${elements}<li>${element}</li>`, '');
 
@@ -64,12 +77,12 @@ const generatePopupSection = (project) => `
             <ul class="flex project_coding_langs">
               ${generateList(project.technologies)}
             </ul>
-            <div class="flex gap">
-              <button class="btn-primary btn-outlined project_details_btn">
+            <div class="flex gap project_links">
+              <button linkto="${project.demo ? new URL(project.demo) : ''}" class="btn-primary btn-outlined project_details_btn">
                 <span>See live</span>
                 <img src="./img/liveArrow.svg" alt="link to live demo" />
               </button>
-              <button class="btn-primary btn-outlined project_details_btn">
+              <button linkto="${project.source ? new URL(project.source) : ''}" class="btn-primary btn-outlined project_details_btn">
                 <span>See source</span>
                 <img src="./img/github.svg" alt="link to github code" />
               </button>
@@ -128,6 +141,16 @@ window.addEventListener('load', () => {
         docBody.classList.toggle('backdrop_filter_details');
         popupContainer.classList.toggle('show');
         docBody.style.overflowY = 'scroll';
+      });
+
+      const linksBtns = document.querySelector('.project_links');
+
+      linksBtns.childNodes.forEach((btn) => {
+        btn.addEventListener('click', (ev) => {
+          if (ev.target.nodeName === 'BUTTON') return openURLInNewTab(ev.target.getAttribute('linkto'));
+          const btnEl = ev.target.closest('button');
+          return openURLInNewTab(btnEl.getAttribute('linkto'));
+        });
       });
     });
   });
