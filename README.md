@@ -1,6 +1,6 @@
 # My Portfolio
 
-Hi! I'm a fullstack web developer and this is my portfolio project in which I'm going to show my resume, my favorite projects and where to contact me.
+This project is a personal website that showcases my personal projects. The project section is dynamically generated using JavaScript and includes links to view the projects and their source code. This allows visitors to easily browse through the portfolio and explore the various projects that I have worked on.
 
 
 ## This Project Is Built With
