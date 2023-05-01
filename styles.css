@@ -408,6 +408,7 @@ nav {
   max-width: 544px;
   min-width: 307px;
   width: 100%;
+  height: 380px;
   flex: 1;
   border-radius: 8px;
 }
