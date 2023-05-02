@@ -5,27 +5,15 @@ const popupContainer = document.querySelector('.details');
 const projects = [
   {
     img: {
-      src: './img/project-7-desktop.png',
-      alt: 'Math Magicians preview',
+      src: './img/project-9-desktop.png',
+      alt: 'Car Rental preview',
     },
-    title: 'Math Magicians',
-    type: ['Desktop', 'FRONTEND DEV', '2022'],
-    description: 'Math Magicians is a simple calculator app that lets you perform basic arithmetic operations such as addition, subtraction, multiplication, and division. With an easy-to-use interface, you can quickly get the answers to all your mathematical problems with ease. ',
-    technologies: ['Reactjs', 'SCSS', 'Javascript', 'Jest'],
-    demo: 'https://math-magicians.onrender.com/',
-    source: 'https://github.com/Kweeka1/math-magicians',
-  },
-  {
-    img: {
-      src: './img/project-8-desktop.png',
-      alt: 'Leaderboard preview',
-    },
-    title: 'Leaderboard',
-    type: ['Desktop', 'FRONTEND DEV', '2022'],
-    description: 'The leaderboard project is a basic application that displays scores submitted by different players. It also allows you to submit your score thanks to the external Leaderboard API service. ',
-    technologies: ['Reactjs', 'SCSS', 'Javascript', 'Redux', 'Jest'],
-    demo: 'https://kweeka1.github.io/leaderboard/dist/',
-    source: 'https://github.com/Kweeka1/leaderboard',
+    title: 'Car Rental',
+    type: ['Desktop', 'FULL STACK DEV', '2023'],
+    description: 'Car Rental is a basic app that allows users to reserve a car, add new cars, and delete existing ones. The backend is built using Ruby On Rails and communicates with Reactjs app on the frontend to provide a seamless user experience. The app also includes functionality for user authentication and authorization, allowing only authorized users to perform actions such as adding or deleting cars.',
+    technologies: ['Ruby', 'Ruby On Rails', 'PostgreSQL', 'Reactjs', 'Redux'],
+    demo: 'https://dev--thunderous-peony-7ad000.netlify.app/',
+    source: 'https://github.com/wassimchakib/Car-Rental-Front-End',
   },
   {
     img: {
@@ -53,18 +41,6 @@ const projects = [
   },
   {
     img: {
-      src: './img/project-5-desktop.png',
-      alt: 'To do application preview',
-    },
-    title: 'To Do App',
-    type: ['WEB', 'FRONTEND DEV', '2022'],
-    description: 'To do List project is a small application where you can save your todo things or tasks inside browser\'s local storage so you won\'t forget about them and you can also tick each one to be marked as completed.',
-    technologies: ['HTML', 'CSS', 'Javascript', 'Webpack'],
-    demo: 'https://kweeka1.github.io/to-do-list/dist/',
-    source: 'https://github.com/Kweeka1/to-do-list',
-  },
-  {
-    img: {
       src: './img/project-6-desktop.png',
       alt: '2022 Global artificial intelligence conference page preview',
     },
@@ -74,6 +50,18 @@ const projects = [
     technologies: ['HTML', 'CSS', 'Javascript'],
     demo: 'https://kweeka1.github.io/capstone-project-conference-page/',
     source: 'https://github.com/Kweeka1/capstone-project-conference-page',
+  },
+  {
+    img: {
+      src: './img/project-7-desktop.png',
+      alt: 'Math Magicians preview',
+    },
+    title: 'Math Magicians',
+    type: ['Desktop', 'FRONTEND DEV', '2022'],
+    description: 'Math Magicians is a simple calculator app that lets you perform basic arithmetic operations such as addition, subtraction, multiplication, and division. With an easy-to-use interface, you can quickly get the answers to all your mathematical problems with ease. ',
+    technologies: ['Reactjs', 'SCSS', 'Javascript', 'Jest'],
+    demo: 'https://math-magicians.onrender.com/',
+    source: 'https://github.com/Kweeka1/math-magicians',
   },
 ];
 
@@ -94,7 +82,9 @@ const generatePopupSection = (project) => `
         <ul class="flex project_details">
          ${generateList(project.type)}
         </ul>
-        <img src=${project.img.src} alt=${project.img.alt} />
+        <div class="flex-center">
+          <img width="700" height="500" src=${project.img.src} alt="${project.img.alt}" />
+        </div>
         <div class="project_description__container">
           <p>${project.description}</p>
           <div>
@@ -128,7 +118,9 @@ const generateCard = (project, id) => `
         <ul class="flex project_coding_langs">
           ${generateList(project.technologies)}
         </ul>
-        <button id=${id} class="project-detail btn-primary btn-outlined">See Project</button>
+        <div class="btn-container">
+          <button id=${id} class="project-detail btn-primary btn-outlined">See Project</button>
+        </div>
       </article>
     </section>`;
 
