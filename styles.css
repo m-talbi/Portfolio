@@ -220,6 +220,12 @@ button:hover > img {
   align-items: center;
 }
 
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .gap {
   gap: 12px;
 }
@@ -317,6 +323,11 @@ nav {
   border-bottom-left-radius: calc(10rem / 3);
 }
 
+.headline-intro {
+  font-size: 14px;
+  color: #505f79;
+}
+
 /* Projects Section */
 
 .projects {
@@ -378,6 +389,13 @@ nav {
   gap: 8px;
 }
 
+.btn-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 /* Projects - Card */
 
 .card {
@@ -395,8 +413,11 @@ nav {
   display: flex;
   flex-direction: column;
   justify-self: flex-start;
-  gap: 12px;
   flex: 1;
+}
+
+.card article p {
+  font-size: 14px;
 }
 
 .card .project_details > li:first-child {
@@ -408,7 +429,7 @@ nav {
   max-width: 544px;
   min-width: 307px;
   width: 100%;
-  height: 380px;
+  height: 350px;
   flex: 1;
   border-radius: 8px;
 }
@@ -459,6 +480,8 @@ nav {
 }
 
 .stack_item__dropdown {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1.5rem;
   padding: 1rem 0;
 }
@@ -469,8 +492,30 @@ nav {
   gap: 10px;
   background-color: #f7f7f9;
   padding: 1.5rem;
-  width: 180px;
   border-radius: 8px;
+}
+
+.dropdown_item img {
+  width: 36px;
+  height: 36px;
+}
+
+.dropdown_item i {
+  font-size: 24px;
+  width: 36px;
+  height: 36px;
+}
+
+.accordion_closed + .stack_item__dropdown {
+  display: none;
+}
+
+.arrow {
+  transition: 0.2s all ease;
+}
+
+.rotate {
+  transform: rotate(90deg);
 }
 
 /* Footer Section */
@@ -663,7 +708,7 @@ footer::after {
 
   .card > article {
     padding: 1rem 0 0 1rem;
-    gap: 18px;
+    height: 350px;
   }
 
   /* About Section */
