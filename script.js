@@ -7,6 +7,9 @@ const underline = document.getElementById('underline');
 const portfolio = document.getElementById('portfolio');
 const about = document.getElementById('about');
 const contact = document.getElementById('contact');
+const languagesAccordion = document.getElementById('languages');
+const frameworksAccordion = document.getElementById('frameworks');
+const skillsAccordion = document.getElementById('skills');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 1) navBar.style.boxShadow = '2px 2px 2px 1px rgba(0, 0, 0, 0.2)';
@@ -100,3 +103,19 @@ window.addEventListener('scroll', () => {
   if (window.innerWidth < 820) return;
   handleUnderline();
 });
+
+const expandAccordion = (accordion) => {
+  const isAccordionClosed = accordion.classList.contains('accordion_closed');
+  accordion.classList.toggle('accordion_closed');
+  const arrow = accordion.querySelector('.arrow');
+  arrow.classList.toggle('rotate');
+  if (isAccordionClosed) {
+    const stack = accordion.nextElementSibling;
+    const { height } = stack.getBoundingClientRect();
+    window.scroll({ left: 0, top: stack.offsetTop - (height / 2), behavior: 'smooth' });
+  }
+};
+
+languagesAccordion.addEventListener('click', () => expandAccordion(languagesAccordion));
+frameworksAccordion.addEventListener('click', () => expandAccordion(frameworksAccordion));
+skillsAccordion.addEventListener('click', () => expandAccordion(skillsAccordion));
