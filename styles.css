@@ -89,7 +89,7 @@ a {
 }
 
 ul {
-  padding: 0.5rem 0;
+  padding-top: 1rem;
 }
 
 button {
@@ -166,8 +166,8 @@ button:hover > img {
   width: 50%;
   align-items: flex-start;
   flex-direction: column;
-  padding: 0.5rem 0;
-  gap: 1rem;
+  padding: 0.5rem 0 1.5rem 0;
+  gap: 0.5rem;
 }
 
 .icons_social__container {
@@ -187,6 +187,10 @@ button:hover > img {
   margin-right: 1.5rem;
   margin-bottom: 1.5rem;
   padding: 4px 12px;
+}
+
+.project_details {
+  padding: 0.5rem 0;
 }
 
 .project_details > li {
@@ -218,12 +222,6 @@ button:hover > img {
 .flex {
   display: flex;
   align-items: center;
-}
-
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .gap {
@@ -324,8 +322,23 @@ nav {
 }
 
 .headline-intro {
-  font-size: 14px;
+  font-size: 15px;
   color: #505f79;
+}
+
+.headline .my-description {
+  font-size: 15px;
+}
+
+.project_preview {
+  display: block;
+  margin: 0 auto;
+  max-width: 700px;
+  max-height: 800px;
+}
+
+.popup_preview_image {
+  width: 100%;
 }
 
 /* Projects Section */
@@ -357,7 +370,7 @@ nav {
   overflow-y: scroll;
   border: 1px solid #ebecf0;
   box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
-  border-radius: 16px;
+  border-radius: 12px;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -588,7 +601,7 @@ footer::after {
   }
 
   .projects {
-    padding: 6rem 2rem !important;
+    padding: 6rem 0.5rem !important;
   }
 
   .project_description__container {
@@ -598,7 +611,7 @@ footer::after {
 
   .card {
     max-width: 544px;
-    min-width: 327px;
+    min-width: 307px;
   }
 
   .nav_menu__container {
@@ -626,8 +639,8 @@ footer::after {
   /* About - stacks list */
 
   .stack_item__dropdown {
-    flex-direction: column;
-    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
     padding: 1rem 0;
   }
 
