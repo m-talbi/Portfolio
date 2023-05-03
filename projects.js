@@ -82,8 +82,8 @@ const generatePopupSection = (project) => `
         <ul class="flex project_details">
          ${generateList(project.type)}
         </ul>
-        <div class="flex-center">
-          <img width="700" height="500" src=${project.img.src} alt="${project.img.alt}" />
+        <div class="flex-center project_preview">
+          <img class="popup_preview_image" src=${project.img.src} alt="${project.img.alt}" />
         </div>
         <div class="project_description__container">
           <p>${project.description}</p>
