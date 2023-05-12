@@ -721,7 +721,7 @@ footer::after {
 
   .card > article {
     padding: 1rem 0 0 1rem;
-    height: 350px;
+    min-height: 350px;
   }
 
   /* About Section */
