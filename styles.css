@@ -66,7 +66,7 @@ textarea {
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
-  width: 327px;
+  width: 100%;
   height: 170px;
 }
 
@@ -80,16 +80,12 @@ input {
   font-size: 17px;
   line-height: 20px;
   color: var(--bg-dark-blue);
-  width: 327px;
+  width: 100%;
   height: 48px;
 }
 
 a {
   text-decoration: none;
-}
-
-ul {
-  padding-top: 1rem;
 }
 
 button {
@@ -108,8 +104,17 @@ button {
   width: max-content;
 }
 
-button:hover > img {
-  filter: saturate(100) invert(1) hue-rotate(175deg) sepia(0.5);
+.live_demo_icon,
+.source_code_icon {
+  all: unset;
+  width: 18px;
+  height: 18px;
+  transition: all 0.3s ease;
+}
+
+button:hover > .live_demo_icon,
+button:hover > .source_code_icon {
+  color: white;
 }
 
 .btn-primary {
@@ -176,6 +181,7 @@ button:hover > img {
 
 .project_coding_langs {
   flex-wrap: wrap;
+  padding: 1rem 0;
 }
 
 .project_coding_langs > li {
@@ -242,7 +248,7 @@ button:hover > img {
 /* Nav Section */
 
 nav {
-  padding: 1rem;
+  padding: 1.25rem;
   position: fixed;
   width: 100%;
   z-index: 10;
@@ -307,7 +313,7 @@ nav {
   height: 5px;
   border-radius: 8px;
   background-color: var(--bg-purple);
-  top: 55px;
+  top: 48px;
   transition: all 0.3s ease;
 }
 
@@ -429,7 +435,7 @@ nav {
   flex: 1;
 }
 
-.card article p {
+.project__description {
   font-size: 14px;
 }
 
@@ -580,6 +586,7 @@ footer::after {
   flex-direction: column;
   gap: 1rem;
   list-style: none;
+  max-width: 400px;
 }
 
 .form-error {
@@ -588,9 +595,24 @@ footer::after {
   width: 327px;
 }
 
+@media screen and (max-width: 400px) {
+  .footer__container {
+    padding: 0;
+  }
+
+  .form_fields {
+    padding: 1rem;
+  }
+
+  #about {
+    padding: 6rem 1rem;
+  }
+}
+
 @media screen and (max-width: 820px) {
   nav {
     justify-content: space-between;
+    padding: 1rem;
   }
 
   .headline {
