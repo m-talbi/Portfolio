@@ -582,7 +582,7 @@ footer::after {
   flex-direction: column;
   gap: 1rem;
   list-style: none;
-  max-width: 400px;
+  max-width: 330px;
 }
 
 .form-error {
