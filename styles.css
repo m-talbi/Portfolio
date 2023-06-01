@@ -577,12 +577,21 @@ footer::after {
 
 /* Footer - Form */
 
+#form {
+  max-width: 310px;
+  width: 100%;
+}
+
 .form_fields {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   list-style: none;
-  max-width: 330px;
+  width: 100%;
+}
+
+.form_fields li {
+  width: 100%;
 }
 
 .form-error {
