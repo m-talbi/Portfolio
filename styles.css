@@ -677,6 +677,7 @@ footer::after {
 
   .card {
     align-items: center;
+    flex-direction: column !important;
   }
 
   /* About - stacks list */
