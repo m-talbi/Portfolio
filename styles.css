@@ -17,13 +17,10 @@
   box-sizing: border-box;
 }
 
-*:not(i) {
-  font-family: var(--font-poppins);
-}
-
 body {
   background-color: rgb(229, 226, 226);
   overflow-x: hidden;
+  font-family: var(--font-poppins);
 }
 
 h1 {
@@ -270,6 +267,12 @@ nav {
   line-height: 20px;
 }
 
+#title p {
+  padding: 0;
+  font-weight: 700;
+  font-size: 14px;
+}
+
 /* Nav - Menu Links toggle icon */
 
 .nav_icon__container {
@@ -323,9 +326,13 @@ nav {
   border-bottom-left-radius: calc(10rem / 3);
 }
 
+.headline h1 {
+  font-size: 40px;
+}
+
 .headline-intro {
-  font-size: 15px;
-  color: #505f79;
+  font-size: 18px;
+  color: var(--bg-purple);
 }
 
 .headline .my-description {
@@ -621,7 +628,7 @@ footer::after {
 @media screen and (max-width: 820px) {
   nav {
     justify-content: space-between;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
   }
 
   .headline {
@@ -692,7 +699,8 @@ footer::after {
   /* Hero Section - Navbar */
 
   nav {
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0.5rem 8rem;
   }
 
   .nav_icon__container {
