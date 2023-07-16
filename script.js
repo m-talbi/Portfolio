@@ -24,30 +24,23 @@ function handleDesktopViewClick(ev) {
 
 function handleUnderline() {
   const scrollTop = window.scrollY;
+  const offsetTop = [portfolio.offsetTop, about.offsetTop - 100, contact.offsetTop - 100];
+  let sectionIndex = -1;
 
-  switch (true) {
-    // Portfolio projects Section
-    case (scrollTop > (portfolio.offsetTop - 200) && scrollTop < (about.offsetTop - 200)):
-      underline.style.display = 'block';
-      underline.style.width = `${links[0].offsetWidth + 14}px`;
-      underline.style.left = `${links[0].offsetLeft - 6}px`;
-      break;
+  if (scrollTop > offsetTop[0] && scrollTop < offsetTop[1]) {
+    // Projects section
+    sectionIndex = 0;
+  } else if (scrollTop > offsetTop[1] && scrollTop < offsetTop[2]) {
     // About Section
-    case (scrollTop > (about.offsetTop - 200) && scrollTop < (contact.offsetTop - 100)):
-      underline.style.display = 'block';
-      underline.style.width = `${links[1].offsetWidth + 14}px`;
-      underline.style.left = `${links[1].offsetLeft - 6}px`;
-      break;
+    sectionIndex = 1;
+  } else if (scrollTop > offsetTop[2]) {
     // Contact Section
-    case (scrollTop > (contact.offsetTop - 100)):
-      underline.style.display = 'block';
-      underline.style.width = `${links[2].offsetWidth + 14}px`;
-      underline.style.left = `${links[2].offsetLeft - 6}px`;
-      break;
-    default:
-      underline.style.width = '0';
-      underline.style.left = `${links[0].offsetLeft - 6}px`;
+    sectionIndex = 2;
   }
+
+  underline.style.display = 'block';
+  underline.style.width = `${links[sectionIndex].offsetWidth + 14}px`;
+  underline.style.left = `${links[sectionIndex].offsetLeft - 6}px`;
 }
 
 function handleMobileViewClick() {
