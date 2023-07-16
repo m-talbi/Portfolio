@@ -200,12 +200,12 @@ button:hover > .source_code_icon {
   line-height: 16px;
 }
 
-.project_details > li:first-child {
+.project_details > .project_card:first-child {
   list-style: none;
   color: var(--text-dark-blue);
 }
 
-.socials__container > .icons_social__container > li {
+.socials__container > .icons_social__container > .social_link {
   list-style: none;
   margin-right: 1rem;
 }
@@ -267,7 +267,7 @@ nav {
   line-height: 20px;
 }
 
-#title p {
+#title .title-text {
   padding: 0;
   font-weight: 700;
   font-size: 14px;
@@ -308,7 +308,7 @@ nav {
 #underline {
   display: none;
   position: absolute;
-  width: 100px;
+  width: 0;
   height: 5px;
   border-radius: 8px;
   background-color: var(--bg-purple);
@@ -442,7 +442,7 @@ nav {
   font-size: 14px;
 }
 
-.card .project_details > li:first-child {
+.card .project_details > .project_detail:first-child {
   list-style: none;
   color: var(--text-dark-blue);
 }
