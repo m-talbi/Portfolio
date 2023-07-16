@@ -70,7 +70,7 @@ const openURLInNewTab = (url) => {
   window.open(url, '_blank');
 };
 
-const generateList = (arr) => arr.reduce((elements, element) => `${elements}<li>${element}</li>`, '');
+const generateList = (arr) => arr.reduce((elements, element) => `${elements}<li class="project_detail">${element}</li>`, '');
 
 const generatePopupSection = (project) => `
     <section class="section_detail_wrapper">
