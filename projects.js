@@ -25,7 +25,7 @@ const projects = [
     description: 'League Challengers Tracker is a basic application that aims to provide users with access to real-time statistics from Riot Games for the top challenger players in League of Legends. With this project, you can retrieve stats such as champion scores, KDA, and win rate for recent games played by these players, across all regions. You can also filter players to find the ones that best meet your needs.',
     technologies: ['Reactjs', 'SCSS', 'Javascript', 'Redux', 'Jest'],
     demo: 'https://league-challengers-tracker.onrender.com/',
-    source: 'https://github.com/Kweeka1/metrics-app',
+    source: 'https://github.com/m-talbi/metrics-app',
   },
   {
     img: {
@@ -36,8 +36,8 @@ const projects = [
     type: ['Desktop', 'FRONTEND Dev', '2022'],
     description: 'Series Guide Application is a small application that displays some of the popular shows in the world. It also allows users to share their comments and feedback about their favored shows and give a thumbs up thanks to the external Involvement and TVMaze API services.',
     technologies: ['HTML', 'SCSS', 'Javascript', 'Webpack', 'Jest'],
-    demo: 'https://kweeka1.github.io/movies-app/dist/',
-    source: 'https://github.com/Kweeka1/movies-app',
+    demo: 'https://m-talbi.github.io/movies-app/dist/',
+    source: 'https://github.com/m-talbi/movies-app',
   },
   {
     img: {
@@ -48,8 +48,8 @@ const projects = [
     type: ['WEB', 'FRONTEND DEV', '2022'],
     description: 'This is my personel version of the conference page design by Cindy Shin in Behance. where I try to implement the mockup as precisely as possible. And I also changed the page content to talk about The Global AI Summit which is a two-way conversation that engages every attendee, speaker, and partner in a rich dialogue about how AI can solve complex problems, empower businesses, and transform society.',
     technologies: ['HTML', 'CSS', 'Javascript'],
-    demo: 'https://kweeka1.github.io/capstone-project-conference-page/',
-    source: 'https://github.com/Kweeka1/capstone-project-conference-page',
+    demo: 'https://m-talbi.github.io/capstone-project-conference-page/',
+    source: 'https://github.com/m-talbi/capstone-project-conference-page',
   },
   {
     img: {
@@ -61,7 +61,7 @@ const projects = [
     description: 'Math Magicians is a simple calculator app that lets you perform basic arithmetic operations such as addition, subtraction, multiplication, and division. With an easy-to-use interface, you can quickly get the answers to all your mathematical problems with ease. ',
     technologies: ['Reactjs', 'SCSS', 'Javascript', 'Jest'],
     demo: 'https://math-magicians.onrender.com/',
-    source: 'https://github.com/Kweeka1/math-magicians',
+    source: 'https://github.com/m-talbi/math-magicians',
   },
 ];
 
